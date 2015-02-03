@@ -2,7 +2,7 @@
 <ul>
   <% @urls.each do |p| %>
     <li>
-      <%="#{p.id} has ben used #{p.counter} times. #{p.long}" %>
+      <a href="<%=p.short%>"><%=p.short%></a>  has ben used <%=p.counter%> times. <a href="<%=p.long%>"><%=p.ellipsis_long%></a>
     </li>
     <% end%>
 </ul>

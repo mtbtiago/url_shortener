@@ -841,3 +841,528 @@ Started GET "/assets/site-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.
 
 
 Started GET "/assets/url-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-03 16:23:23 +0100
+
+
+Started GET "/urls" for 127.0.0.1 at 2015-02-03 16:40:01 +0100
+Processing by UrlsController#index as HTML
+  [1m[36mUrl Load (0.5ms)[0m  [1mSELECT "urls".* FROM "urls"[0m
+  Rendered urls/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 118ms (Views: 116.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/urls-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-02-03 16:40:01 +0100
+
+
+Started GET "/assets/application-9785eab88e1b8b9be7784252c1b9f437.css?body=1" for 127.0.0.1 at 2015-02-03 16:40:01 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-02-03 16:40:01 +0100
+
+
+Started GET "/assets/url-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-02-03 16:40:01 +0100
+
+
+Started GET "/assets/site-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-02-03 16:40:01 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-02-03 16:40:01 +0100
+
+
+Started GET "/assets/turbolinks-da8ddad9c2c5483d4c5c30c1ce325253.js?body=1" for 127.0.0.1 at 2015-02-03 16:40:01 +0100
+
+
+Started GET "/assets/site-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-03 16:40:01 +0100
+
+
+Started GET "/assets/urls-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-03 16:40:01 +0100
+
+
+Started GET "/assets/url-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-03 16:40:01 +0100
+
+
+Started GET "/assets/application-3602cadbcb413bdfcfbb93e84761bd53.js?body=1" for 127.0.0.1 at 2015-02-03 16:40:01 +0100
+
+
+Started GET "/urls" for 127.0.0.1 at 2015-02-03 17:14:31 +0100
+Processing by UrlsController#index as HTML
+  Rendered urls/index.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 10ms
+
+SyntaxError (/home/tiago/dev/ironhack/rails/url_shortener/app/views/urls/index.html.erb:5: syntax error, unexpected =>, expecting ')'
+...uffer.append=(p.ellipsis_long=></a>
+...                               ^
+/home/tiago/dev/ironhack/rails/url_shortener/app/views/urls/index.html.erb:6: unknown regexp option - l
+/home/tiago/dev/ironhack/rails/url_shortener/app/views/urls/index.html.erb:7: syntax error, unexpected '<'
+    <% end);@output_buffer.safe_append='
+     ^
+/home/tiago/dev/ironhack/rails/url_shortener/app/views/urls/index.html.erb:10: syntax error, unexpected keyword_ensure, expecting ')'
+/home/tiago/dev/ironhack/rails/url_shortener/app/views/urls/index.html.erb:12: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/urls/index.html.erb:5: syntax error, unexpected =>, expecting ')'
+  app/views/urls/index.html.erb:6: unknown regexp option - l
+  app/views/urls/index.html.erb:7: syntax error, unexpected '<'
+  app/views/urls/index.html.erb:10: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/urls/index.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /home/tiago/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (7.8ms)
+  Rendered /home/tiago/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /home/tiago/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/tiago/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.0ms)
+  Rendered /home/tiago/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (32.9ms)
+
+
+Started GET "/urls" for 127.0.0.1 at 2015-02-03 17:15:41 +0100
+Processing by UrlsController#index as HTML
+  [1m[35mUrl Load (3.0ms)[0m  SELECT "urls".* FROM "urls"
+  Rendered urls/index.html.erb within layouts/application (15.9ms)
+Completed 500 Internal Server Error in 20ms
+
+ActionView::Template::Error (no implicit conversion of nil into String):
+    2: <ul>
+    3:   <% @urls.each do |p| %>
+    4:     <li>
+    5:       <%="#{p.short} has ben used #{p.counter} times. "%> <a href="<%=p.long%>"><%=p.ellipsis_long%></a>
+    6:     </li>
+    7:     <% end%>
+    8: </ul>
+  app/models/url.rb:4:in `+'
+  app/models/url.rb:4:in `short'
+  app/views/urls/index.html.erb:5:in `block in _app_views_urls_index_html_erb___1672210281418468583_70248597897340'
+  app/views/urls/index.html.erb:3:in `_app_views_urls_index_html_erb___1672210281418468583_70248597897340'
+
+
+  Rendered /home/tiago/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (8.2ms)
+  Rendered /home/tiago/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /home/tiago/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/tiago/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.1ms)
+  Rendered /home/tiago/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (29.2ms)
+
+
+Started GET "/urls" for 127.0.0.1 at 2015-02-03 17:17:12 +0100
+Processing by UrlsController#index as HTML
+  [1m[36mUrl Load (0.4ms)[0m  [1mSELECT "urls".* FROM "urls"[0m
+  Rendered urls/index.html.erb within layouts/application (7.6ms)
+Completed 500 Internal Server Error in 16ms
+
+ActionView::Template::Error (no implicit conversion of Fixnum into String):
+    2: <ul>
+    3:   <% @urls.each do |p| %>
+    4:     <li>
+    5:       <%="#{p.short} has ben used #{p.counter} times. "%> <a href="<%=p.long%>"><%=p.ellipsis_long%></a>
+    6:     </li>
+    7:     <% end%>
+    8: </ul>
+  app/models/url.rb:4:in `+'
+  app/models/url.rb:4:in `short'
+  app/views/urls/index.html.erb:5:in `block in _app_views_urls_index_html_erb___1672210281418468583_70248597897340'
+  app/views/urls/index.html.erb:3:in `_app_views_urls_index_html_erb___1672210281418468583_70248597897340'
+
+
+  Rendered /home/tiago/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (13.2ms)
+  Rendered /home/tiago/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (4.8ms)
+  Rendered /home/tiago/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/tiago/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.2ms)
+  Rendered /home/tiago/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (44.0ms)
+
+
+Started GET "/urls" for 127.0.0.1 at 2015-02-03 17:17:26 +0100
+Processing by UrlsController#index as HTML
+  [1m[35mUrl Load (0.4ms)[0m  SELECT "urls".* FROM "urls"
+  Rendered urls/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 114ms (Views: 108.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/site-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-02-03 17:17:26 +0100
+
+
+Started GET "/assets/url-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-02-03 17:17:26 +0100
+
+
+Started GET "/assets/application-9785eab88e1b8b9be7784252c1b9f437.css?body=1" for 127.0.0.1 at 2015-02-03 17:17:26 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-02-03 17:17:26 +0100
+
+
+Started GET "/assets/urls-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-02-03 17:17:26 +0100
+
+
+Started GET "/assets/turbolinks-da8ddad9c2c5483d4c5c30c1ce325253.js?body=1" for 127.0.0.1 at 2015-02-03 17:17:26 +0100
+
+
+Started GET "/assets/site-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-03 17:17:26 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-02-03 17:17:26 +0100
+
+
+Started GET "/assets/urls-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-03 17:17:26 +0100
+
+
+Started GET "/assets/url-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-03 17:17:26 +0100
+
+
+Started GET "/assets/application-3602cadbcb413bdfcfbb93e84761bd53.js?body=1" for 127.0.0.1 at 2015-02-03 17:17:26 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-02-03 17:17:26 +0100
+
+
+Started GET "/assets/turbolinks-da8ddad9c2c5483d4c5c30c1ce325253.js?body=1" for 127.0.0.1 at 2015-02-03 17:17:26 +0100
+
+
+Started GET "/assets/site-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-03 17:17:26 +0100
+
+
+Started GET "/assets/url-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-03 17:17:26 +0100
+
+
+Started GET "/assets/urls-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-03 17:17:26 +0100
+
+
+Started GET "/assets/application-3602cadbcb413bdfcfbb93e84761bd53.js?body=1" for 127.0.0.1 at 2015-02-03 17:17:26 +0100
+
+
+Started GET "/urls" for 127.0.0.1 at 2015-02-03 17:18:02 +0100
+Processing by UrlsController#index as HTML
+  [1m[36mUrl Load (0.4ms)[0m  [1mSELECT "urls".* FROM "urls"[0m
+  Rendered urls/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 105ms (Views: 98.8ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/site-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-02-03 17:18:03 +0100
+
+
+Started GET "/assets/url-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-02-03 17:18:03 +0100
+
+
+Started GET "/assets/application-9785eab88e1b8b9be7784252c1b9f437.css?body=1" for 127.0.0.1 at 2015-02-03 17:18:03 +0100
+
+
+Started GET "/assets/urls-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-02-03 17:18:03 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-02-03 17:18:03 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-02-03 17:18:03 +0100
+
+
+Started GET "/assets/turbolinks-da8ddad9c2c5483d4c5c30c1ce325253.js?body=1" for 127.0.0.1 at 2015-02-03 17:18:03 +0100
+
+
+Started GET "/assets/site-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-03 17:18:03 +0100
+
+
+Started GET "/assets/url-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-03 17:18:03 +0100
+
+
+Started GET "/assets/urls-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-03 17:18:03 +0100
+
+
+Started GET "/assets/application-3602cadbcb413bdfcfbb93e84761bd53.js?body=1" for 127.0.0.1 at 2015-02-03 17:18:03 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-02-03 17:18:03 +0100
+
+
+Started GET "/assets/turbolinks-da8ddad9c2c5483d4c5c30c1ce325253.js?body=1" for 127.0.0.1 at 2015-02-03 17:18:03 +0100
+
+
+Started GET "/assets/urls-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-03 17:18:03 +0100
+
+
+Started GET "/assets/application-3602cadbcb413bdfcfbb93e84761bd53.js?body=1" for 127.0.0.1 at 2015-02-03 17:18:03 +0100
+
+
+Started GET "/urls" for 127.0.0.1 at 2015-02-03 17:18:14 +0100
+Processing by UrlsController#index as HTML
+  [1m[35mUrl Load (0.5ms)[0m  SELECT "urls".* FROM "urls"
+  Rendered urls/index.html.erb within layouts/application (8.7ms)
+Completed 500 Internal Server Error in 17ms
+
+ActionView::Template::Error (undefined method `length' for nil:NilClass):
+    2: <ul>
+    3:   <% @urls.each do |p| %>
+    4:     <li>
+    5:       <%="#{p.short} has ben used #{p.counter} times. "%> <a href="<%=p.long%>"><%=p.ellipsis_long%></a>
+    6:     </li>
+    7:     <% end%>
+    8: </ul>
+  app/models/url.rb:16:in `ellipsis'
+  app/models/url.rb:10:in `ellipsis_long'
+  app/views/urls/index.html.erb:5:in `block in _app_views_urls_index_html_erb___1672210281418468583_70248597897340'
+  app/views/urls/index.html.erb:3:in `_app_views_urls_index_html_erb___1672210281418468583_70248597897340'
+
+
+  Rendered /home/tiago/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (8.3ms)
+  Rendered /home/tiago/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /home/tiago/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/tiago/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.0ms)
+  Rendered /home/tiago/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (31.3ms)
+
+
+Started GET "/urls" for 127.0.0.1 at 2015-02-03 17:18:33 +0100
+Processing by UrlsController#index as HTML
+  [1m[36mUrl Load (0.4ms)[0m  [1mSELECT "urls".* FROM "urls"[0m
+  Rendered urls/index.html.erb within layouts/application (12.6ms)
+Completed 500 Internal Server Error in 25ms
+
+ActionView::Template::Error (undefined method `size' for nil:NilClass):
+    2: <ul>
+    3:   <% @urls.each do |p| %>
+    4:     <li>
+    5:       <%="#{p.short} has ben used #{p.counter} times. "%> <a href="<%=p.long%>"><%=p.ellipsis_long%></a>
+    6:     </li>
+    7:     <% end%>
+    8: </ul>
+  app/models/url.rb:16:in `ellipsis'
+  app/models/url.rb:10:in `ellipsis_long'
+  app/views/urls/index.html.erb:5:in `block in _app_views_urls_index_html_erb___1672210281418468583_70248597897340'
+  app/views/urls/index.html.erb:3:in `_app_views_urls_index_html_erb___1672210281418468583_70248597897340'
+
+
+  Rendered /home/tiago/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (11.5ms)
+  Rendered /home/tiago/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (4.6ms)
+  Rendered /home/tiago/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/tiago/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.9ms)
+  Rendered /home/tiago/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (37.3ms)
+
+
+Started GET "/urls" for 127.0.0.1 at 2015-02-03 17:18:49 +0100
+Processing by UrlsController#index as HTML
+  [1m[35mUrl Load (0.4ms)[0m  SELECT "urls".* FROM "urls"
+  Rendered urls/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 103ms (Views: 96.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/site-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-02-03 17:18:50 +0100
+
+
+Started GET "/assets/url-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-02-03 17:18:50 +0100
+
+
+Started GET "/assets/urls-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-02-03 17:18:50 +0100
+
+
+Started GET "/assets/site-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-03 17:18:50 +0100
+
+
+Started GET "/assets/application-9785eab88e1b8b9be7784252c1b9f437.css?body=1" for 127.0.0.1 at 2015-02-03 17:18:50 +0100
+
+
+Started GET "/assets/turbolinks-da8ddad9c2c5483d4c5c30c1ce325253.js?body=1" for 127.0.0.1 at 2015-02-03 17:18:50 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-02-03 17:18:50 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-02-03 17:18:50 +0100
+
+
+Started GET "/assets/url-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-03 17:18:50 +0100
+
+
+Started GET "/assets/urls-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-03 17:18:50 +0100
+
+
+Started GET "/assets/application-3602cadbcb413bdfcfbb93e84761bd53.js?body=1" for 127.0.0.1 at 2015-02-03 17:18:50 +0100
+
+
+Started GET "/urls" for 127.0.0.1 at 2015-02-03 17:26:15 +0100
+Processing by UrlsController#index as HTML
+  [1m[36mUrl Load (0.4ms)[0m  [1mSELECT "urls".* FROM "urls"[0m
+  Rendered urls/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 101ms (Views: 95.1ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/site-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-02-03 17:26:15 +0100
+
+
+Started GET "/assets/urls-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-02-03 17:26:15 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-02-03 17:26:15 +0100
+
+
+Started GET "/assets/url-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-02-03 17:26:15 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-02-03 17:26:15 +0100
+
+
+Started GET "/assets/application-9785eab88e1b8b9be7784252c1b9f437.css?body=1" for 127.0.0.1 at 2015-02-03 17:26:15 +0100
+
+
+Started GET "/assets/turbolinks-da8ddad9c2c5483d4c5c30c1ce325253.js?body=1" for 127.0.0.1 at 2015-02-03 17:26:15 +0100
+
+
+Started GET "/assets/site-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-03 17:26:15 +0100
+
+
+Started GET "/assets/url-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-03 17:26:15 +0100
+
+
+Started GET "/assets/urls-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-03 17:26:15 +0100
+
+
+Started GET "/assets/application-3602cadbcb413bdfcfbb93e84761bd53.js?body=1" for 127.0.0.1 at 2015-02-03 17:26:15 +0100
+
+
+Started GET "/urls" for 127.0.0.1 at 2015-02-03 17:28:24 +0100
+Processing by UrlsController#index as HTML
+  [1m[35mUrl Load (0.4ms)[0m  SELECT "urls".* FROM "urls"
+  Rendered urls/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 96ms (Views: 94.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/site-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-02-03 17:28:24 +0100
+
+
+Started GET "/assets/application-9785eab88e1b8b9be7784252c1b9f437.css?body=1" for 127.0.0.1 at 2015-02-03 17:28:24 +0100
+
+
+Started GET "/assets/urls-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-02-03 17:28:24 +0100
+
+
+Started GET "/assets/url-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-02-03 17:28:24 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-02-03 17:28:24 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-02-03 17:28:24 +0100
+
+
+Started GET "/assets/turbolinks-da8ddad9c2c5483d4c5c30c1ce325253.js?body=1" for 127.0.0.1 at 2015-02-03 17:28:24 +0100
+
+
+Started GET "/assets/site-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-03 17:28:24 +0100
+
+
+Started GET "/assets/url-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-03 17:28:24 +0100
+
+
+Started GET "/assets/urls-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-03 17:28:24 +0100
+
+
+Started GET "/assets/application-3602cadbcb413bdfcfbb93e84761bd53.js?body=1" for 127.0.0.1 at 2015-02-03 17:28:24 +0100
+
+
+Started GET "/urls" for 127.0.0.1 at 2015-02-03 17:28:58 +0100
+Processing by UrlsController#index as HTML
+  [1m[36mUrl Load (0.5ms)[0m  [1mSELECT "urls".* FROM "urls"[0m
+  Rendered urls/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 94ms (Views: 92.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/site-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-02-03 17:28:58 +0100
+
+
+Started GET "/assets/urls-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-02-03 17:28:58 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-02-03 17:28:58 +0100
+
+
+Started GET "/assets/url-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-02-03 17:28:58 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-02-03 17:28:58 +0100
+
+
+Started GET "/assets/application-9785eab88e1b8b9be7784252c1b9f437.css?body=1" for 127.0.0.1 at 2015-02-03 17:28:58 +0100
+
+
+Started GET "/assets/turbolinks-da8ddad9c2c5483d4c5c30c1ce325253.js?body=1" for 127.0.0.1 at 2015-02-03 17:28:58 +0100
+
+
+Started GET "/assets/site-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-03 17:28:58 +0100
+
+
+Started GET "/assets/url-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-03 17:28:58 +0100
+
+
+Started GET "/assets/urls-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-03 17:28:58 +0100
+
+
+Started GET "/assets/application-3602cadbcb413bdfcfbb93e84761bd53.js?body=1" for 127.0.0.1 at 2015-02-03 17:28:58 +0100
+
+
+Started GET "/urls" for 127.0.0.1 at 2015-02-03 17:29:22 +0100
+Processing by UrlsController#index as HTML
+  [1m[35mUrl Load (0.6ms)[0m  SELECT "urls".* FROM "urls"
+  Rendered urls/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 121ms (Views: 120.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/site-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-02-03 17:29:22 +0100
+
+
+Started GET "/assets/url-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-02-03 17:29:22 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-02-03 17:29:22 +0100
+
+
+Started GET "/assets/application-9785eab88e1b8b9be7784252c1b9f437.css?body=1" for 127.0.0.1 at 2015-02-03 17:29:22 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-02-03 17:29:22 +0100
+
+
+Started GET "/assets/urls-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-02-03 17:29:22 +0100
+
+
+Started GET "/assets/turbolinks-da8ddad9c2c5483d4c5c30c1ce325253.js?body=1" for 127.0.0.1 at 2015-02-03 17:29:22 +0100
+
+
+Started GET "/assets/site-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-03 17:29:22 +0100
+
+
+Started GET "/assets/url-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-03 17:29:22 +0100
+
+
+Started GET "/assets/urls-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-03 17:29:23 +0100
+
+
+Started GET "/assets/application-3602cadbcb413bdfcfbb93e84761bd53.js?body=1" for 127.0.0.1 at 2015-02-03 17:29:23 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2015-02-03 17:31:07 +0100
+Processing by SiteController#home as HTML
+  Rendered site/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 82ms (Views: 81.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/url-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-02-03 17:31:07 +0100
+
+
+Started GET "/assets/site-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-02-03 17:31:07 +0100
+
+
+Started GET "/assets/urls-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-02-03 17:31:07 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-02-03 17:31:07 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-02-03 17:31:07 +0100
+
+
+Started GET "/assets/application-9785eab88e1b8b9be7784252c1b9f437.css?body=1" for 127.0.0.1 at 2015-02-03 17:31:07 +0100
+
+
+Started GET "/assets/turbolinks-da8ddad9c2c5483d4c5c30c1ce325253.js?body=1" for 127.0.0.1 at 2015-02-03 17:31:07 +0100
+
+
+Started GET "/assets/site-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-03 17:31:07 +0100
+
+
+Started GET "/assets/url-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-03 17:31:07 +0100
+
+
+Started GET "/assets/urls-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-03 17:31:07 +0100
+
+
+Started GET "/assets/application-3602cadbcb413bdfcfbb93e84761bd53.js?body=1" for 127.0.0.1 at 2015-02-03 17:31:07 +0100
