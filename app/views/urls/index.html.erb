@@ -1,0 +1,8 @@
+<h1>List of grabbed URLs</h1>
+<ul>
+  <% @urls.each do |p| %>
+    <li>
+      <%="#{p.id} has ben used #{p.counter} times. #{p.long}" %>
+    </li>
+    <% end%>
+</ul>
