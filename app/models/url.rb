@@ -1,7 +1,6 @@
 class Url < ActiveRecord::Base
   def short
-    # converts @id in url
-    return 'http://localhost/'+self.id.to_s
+    return Url.make_url(self.id)
   end
 
   def ellipsis_long
@@ -10,14 +9,21 @@ class Url < ActiveRecord::Base
     ellipsis(self.long)
   end
 
+  def self.make_url(num)
+    # converts num in url
+    # ToDo: in which port we are?
+    'http://localhost:3000/url/'+num.to_s
+  end
+
+  #ToDo: move this kind of stuff to a gem
   private
-    MAX = 40
+    MAX = 60
     def ellipsis(value)
       if value.size > MAX
-        left = value[0,(MAX/2)-3]
+        left = value[0,(MAX/2)-5]
         right = value[-(MAX/2),value.size]
         # right = value.reverse.slice(0,(MAX/2)).reverse
-        result = left+'...'+right
+        result = left+' ... '+right
       else
         result = value
       end

@@ -16,3 +16,7 @@
 .code_disclaimer {
   font-family: "Courier New", Courier, monospace;
 }
+
+.error {
+  color: red;
+}

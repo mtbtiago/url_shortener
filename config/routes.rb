@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   # to create a controller -> rails g controller site
   get '/' => 'site#home'
   get '/urls' => 'urls#index'
+  get '/url/:id' => 'urls#show'
 end
 
